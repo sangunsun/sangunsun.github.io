@@ -1,3 +1,4 @@
+{% include header.html %}
 ## test latex
 $E=MC^2$
 + 公式2
