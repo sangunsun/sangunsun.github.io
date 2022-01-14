@@ -29,14 +29,14 @@ Syntax highlighted code block
 ## test latex
 $E=MC^2$
 + 公式2
-$
+$$
         \left(\begin{matrix} 
         3& 2& 0& 6\\
         0& 0& 1& 2\\
         0&0&0&0
         \end{matrix} 
         \right)
-        $
+        $$
 
 
 For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
