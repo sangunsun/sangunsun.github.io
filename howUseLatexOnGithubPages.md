@@ -36,7 +36,7 @@ kramdown:
 ```
 ### 在每一个md文档的首行加入如下代码
 ```
-{% include header.html %}
+\{% include header.html %\}
 ```
 
 ### 现在就可以在\$ \$中间写入行内公式，在\$\$ \$\$中间写跨行公式
