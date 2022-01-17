@@ -1,4 +1,3 @@
-{% include header.html %}
 
 让github-pages支持latex数学公式
 
