@@ -1,5 +1,5 @@
 
-让github-pages支持latex数学公式
+让github-pages支持latex数学公式和画图
 
 [toc]
 
@@ -15,7 +15,7 @@ kramdown:
   math_engine: katex
 ```
 
-### 在A目录下创建_includes/header.html文件并在文件中加入如下代码
+### 在根目录下创建_includes/header.html文件,并在文件中加入如下代码
 ```
 <head>
 	<script type="text/x-mathjax-config"> 
@@ -31,14 +31,52 @@ kramdown:
     
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
     </script>
+	
+	
+    	<script src="//cdnjs.cloudflare.com/ajax/libs/mermaid/8.6.0/mermaid.min.js"></script>
+	<script>
+		var config = {
+		  startOnLoad: true,
+		  theme: "forest",
+		  flowchart:{
+		    useMaxWidth: true,
+		    htmlLabels: true
+		  }
+		};
+		mermaid.initialize(config);
+		window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+	</script>
 </head>
 ```
-### 在每一个md文档的首行加入如下代码
+### 在根目录下创建_layouts/default.html文件，并在文件中加入如下代码
 ```
-\{ \% include header.html \% \}
+<!DOCTYPE html>
+<html lang="en">
+{% include header.html %}
+	 
+<body>	
+	
+    {{ content }}	
+	
+</body>
+
+<script>
+var config = {
+    startOnLoad:true,
+    flowchart:{
+            useMaxWidth:true,
+            htmlLabels:true
+        }
+};
+mermaid.initialize(config);
+window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+</script>
+
+</html>
 ```
 
-### 现在就可以在`$ $`中间写入行内公式，在`$$ $$`中间写跨行公式
+### 编辑markdown文档，就可以使用mermaid语法画图，使用latex语法写数学公式
+
 
 ### 一些数学公式显示例子
 
@@ -69,7 +107,7 @@ $$
 
 ### 画流程图
 
-+ 有道云笔记语法
++ 有道云笔记语法(不支持)
 
 ```
 graph TB
@@ -84,7 +122,7 @@ loopEnd-->loopStart
 
 ```
 
-+ typora语法
++ typora使用的mermaid语法(支持)
 
 ```mermaid
 graph TB
@@ -97,22 +135,6 @@ readPin--No-->loopEnd(循环结束)
 playMidi-->loopEnd
 loopEnd-->loopStart
 ```
-
-+ 网上看到的语法
-
-```flowchat
-graph TB
-start(开始)-->setKeyNums(设置按键数量)
-setKeyNums-->setKey(设置各按键参数)
-setKey-->loopStart(循环开始)
-loopStart-->readPin{扫描是否有按键按下?}
-readPin--Yes-->playMidi(发送按键对应MIDI信号)
-readPin--No-->loopEnd(循环结束)
-playMidi-->loopEnd
-loopEnd-->loopStart
-
-```
-
 
 ### 下面是在学习这个知识中参考过的一些网页
 
