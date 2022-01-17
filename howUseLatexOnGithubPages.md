@@ -117,8 +117,8 @@ kramdown:
 <style>
 .center {
   margin: auto;
-  width: 60%;
-  border: 3px solid #73AD21;
+  width: 50%;
+  border: 1px solid #F5F5F5;
   padding: 10px;
 }
 </style>
