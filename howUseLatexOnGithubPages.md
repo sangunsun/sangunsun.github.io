@@ -68,6 +68,49 @@ $$
 A_{m\times n}\xrightarrow[行变换]{初等}行阶梯形矩阵\xrightarrow[行变换]{初等}行最简形矩阵\xrightarrow[列变换]{初等}等价标准形矩阵E^{(r)}_{m\times n}
 $$
 
+### 画流程图
+
++ 有道云笔记语法
+```
+graph TB
+start(开始)-->setKeyNums(设置按键数量)
+setKeyNums-->setKey(设置各按键参数)
+setKey-->loopStart(循环开始)
+loopStart-->readPin{扫描是否有按键按下?}
+readPin--Yes-->playMidi(发送按键对应MIDI信号)
+readPin--No-->loopEnd(循环结束)
+playMidi-->loopEnd
+loopEnd-->loopStart
+
+```
+
++ typora语法
+```mermaid
+graph TB
+start(开始)-->setKeyNums(设置按键数量)
+setKeyNums-->setKey(设置各按键参数)
+setKey-->loopStart(循环开始)
+loopStart-->readPin{扫描是否有按键按下?}
+readPin--Yes-->playMidi(发送按键对应MIDI信号)
+readPin--No-->loopEnd(循环结束)
+playMidi-->loopEnd
+loopEnd-->loopStart
+
+```
++ 网上看到的语法
+```flowchat
+graph TB
+start(开始)-->setKeyNums(设置按键数量)
+setKeyNums-->setKey(设置各按键参数)
+setKey-->loopStart(循环开始)
+loopStart-->readPin{扫描是否有按键按下?}
+readPin--Yes-->playMidi(发送按键对应MIDI信号)
+readPin--No-->loopEnd(循环结束)
+playMidi-->loopEnd
+loopEnd-->loopStart
+
+```
+
 
 ### 下面是在学习这个知识中参考过的一些网页
 
