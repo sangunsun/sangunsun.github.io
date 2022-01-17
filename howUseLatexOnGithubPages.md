@@ -3,8 +3,8 @@
 
 [toc]
 
-
-### 一些数学公式显示例子
+### 几个数学公式和画图的效果展示
+#### 一些数学公式显示例子
 
 符号|读音|意义
 |---|---|---|
@@ -31,7 +31,7 @@ $$
 A_{m\times n}\xrightarrow[行变换]{初等}行阶梯形矩阵\xrightarrow[行变换]{初等}行最简形矩阵\xrightarrow[列变换]{初等}等价标准形矩阵E^{(r)}_{m\times n}
 $$
 
-### 画流程图
+#### 画流程图
 
 + 有道云笔记语法(不支持)
 
@@ -62,20 +62,20 @@ playMidi-->loopEnd
 loopEnd-->loopStart
 ```
 
-
-### 创建一个github pages仓库A并发布
+### 配置步骤
+#### 创建一个github pages仓库A并发布
 + 请参考官方说明文档
 + 英文：https://docs.github.com/en/pages/quickstart
 + 中文：https://docs.github.com/cn/pages/quickstart
 
-### 修改_config.yml文件，加入如下内容
+#### 修改_config.yml文件，加入如下内容
 ```
 markdown: kramdown
 kramdown:
   math_engine: katex
 ```
 
-### 在根目录下创建_includes/header.html文件,并在文件中加入如下代码
+#### 在根目录下创建_includes/header.html文件,并在文件中加入如下代码
 ```
 <head>
 	<script type="text/x-mathjax-config"> 
@@ -108,7 +108,7 @@ kramdown:
 	</script>
 </head>
 ```
-### 在根目录下创建_layouts/default.html文件，并在文件中加入如下代码
+#### 在根目录下创建_layouts/default.html文件，并在文件中加入如下代码
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -135,7 +135,7 @@ window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
 </html>
 ```
 
-### 编辑markdown文档，就可以使用mermaid语法画图，使用latex语法写数学公式
+#### 编辑markdown文档，就可以使用mermaid语法画图，使用latex语法写数学公式
 
 ### 遗留问题
 + 启用_layouts/default.html模板文件后，丢失了原来自带的样式，得自己写css控制样式，我又不会前端，所以你们看到的这个文章很难看。
