@@ -71,6 +71,7 @@ $$
 ### 画流程图
 
 + 有道云笔记语法
+
 ```
 graph TB
 start(开始)-->setKeyNums(设置按键数量)
@@ -85,6 +86,7 @@ loopEnd-->loopStart
 ```
 
 + typora语法
+
 ```mermaid
 graph TB
 start(开始)-->setKeyNums(设置按键数量)
@@ -95,10 +97,10 @@ readPin--Yes-->playMidi(发送按键对应MIDI信号)
 readPin--No-->loopEnd(循环结束)
 playMidi-->loopEnd
 loopEnd-->loopStart
-
 ```
 
 + 网上看到的语法
+
 ```flowchat
 graph TB
 start(开始)-->setKeyNums(设置按键数量)
