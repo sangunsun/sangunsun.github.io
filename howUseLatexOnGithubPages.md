@@ -165,3 +165,23 @@ window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
 
 + jekyll文档:
 http://jekyllcn.com/docs/templates/
+
++ Github Pages + jekyll 全面介绍极简搭建个人网站和博客： https://zhuanlan.zhihu.com/p/51240503
+
+#### 用 GitHub 搭建静态博客太繁琐？用这个小工具实现「傻瓜式」发布
++ https://sspai.com/post/58013#!
+
++ 该网页介绍了一些其它网页没有介绍的github-pages特点，如下面这段
+
+	目前，GitHub 上的所有仓库都可以开启 Pages 服务。仓库分为两类：
+
+	第一类，仓库名形如 <用户名>.github.io。开启 Pages 服务后可以直接通过 http://<用户名>.github.io 访问。
+	
+	第二类，其它名称的仓库。对这些仓库，开启 Pages 服务后可以通过 http://<用户名>.github.io/<仓库名> 访问。
+	
+	两类仓库都可以指定部署的内容来源，包括：
+	
+	master 分支（默认）  
+	master 分支中的 docs 文件夹  
+	gh-pages 分支  
+	这两类仓库都可以绑定自定义域名，方法相同，在发布来源中创建 CNAME 文件或者在设置中绑定就行。此外，私有仓库也可以开启 Pages 服务，这十分适合用来发布博客，设想在 master 分支中存储源文件，是只自己可见的；将生成的网站发布到 gh-pages 分支，是公众可见的。这是兼具安全与便捷性的方案。
